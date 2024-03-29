@@ -234,6 +234,10 @@ body {
     transition: color 0.3s ease-out;
 }
 
+.links a:after {
+    transition: all .1s;
+}
+
 .links a:hover {
     color: #fff;
 }
@@ -313,12 +317,14 @@ body {
     .nav.active {
         transform: translateX(0);
         display: flex;
+        justify-content: center;
     }
 
     .links {
+        display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        text-align: left;
+        align-items: center;
+        justify-content: center;
         padding: 10px 20px;
     }
 

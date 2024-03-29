@@ -20,14 +20,13 @@ const footerLinks = document.querySelectorAll('.footer .links li');
 const headerLinks = document.querySelectorAll('.header .links li');
 
 if (window.matchMedia('(max-width: 768px)').matches) {
-  burger.addEventListener('click', () => {
-    burger.classList.toggle('active');
-    nav.classList.toggle('active');
-  });
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        nav.classList.toggle('active');
+    });
 
-  footerLinks.forEach((link, index) => {
-    const headerLink = headerLinks[index];
-    const clone = link.cloneNode(true);
-    headerLink.appendChild(clone);
-  });
+    const lastHeaderLink = headerLinks[headerLinks.length - 1]
+    footerLinks.forEach((link, index) => {
+        lastHeaderLink.appendChild(link);
+    });
 }
