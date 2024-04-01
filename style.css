@@ -5,6 +5,10 @@
   font-style: normal;
 }
 
+img {
+    margin-right: 20px;
+}
+
 body {
     margin: 50px auto;
     max-width: 100%;
